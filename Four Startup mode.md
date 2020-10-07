@@ -31,7 +31,7 @@
 
 ![image-20201007145405894](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F.png)
 
-每点击一次按钮就会创建出一个新的MainActivity实例。
+每点击一次按钮就会创建出一个新的MainActivity实例。此时返回栈会存在2个MainActivity实例，需要连按Back键才能回到最开始的那个界面。
 
 ### 二、单顶模式：
 
