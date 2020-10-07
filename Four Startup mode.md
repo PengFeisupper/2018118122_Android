@@ -29,9 +29,11 @@
 
 运行程序，然后在activity_main界面连续点击两次按钮可以看到logcat中打印的信息如下图所示：
 
-![image-20201007145405894](https://github.com/PengFeisupper/2018118122_Android/tree/homework/Four%20Startup%20mode/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE)
+![image-20201007145405894](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F.png)
 
 每点击一次按钮就会创建出一个新的MainActivity实例。
 
 ### 二、单顶模式：
+
+
 
