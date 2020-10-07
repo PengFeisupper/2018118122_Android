@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d("FirstActivity",this.toString());
+        Log.d("MainActivity",this.toString());
         setContentView(R.layout.activity_main);
         Button startNormalActivity = (Button) findViewById(R.id.start_normal_activity);
         Button startDialogActivity = (Button) findViewById(R.id.start_dialog_activity);
@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         startDialogActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DialogActivity.class);
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
     }
-    protected  void onStart() {
+   /* protected  void onStart() {
         super.onStart();
         Log.d(TAG,"onStart");
     }
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         super.onRestart();
         Log.d(TAG,"onRestart");
     }
-
+*/
 
 
 }
