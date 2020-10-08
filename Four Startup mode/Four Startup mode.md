@@ -108,9 +108,7 @@
 
 在MainActivity界面点击按钮选择进入Normalactivity，然后在NormalActivity界面点击按钮又会重新进入MainActivity,然后在MainActivity界面点击按钮进入DialogActivity，再DialogAcctivity点击按钮又会重新进入MainActivity。
 
-![单顶模式1-2](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F1-2.png)
-
-![单顶模式1-4](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F1-4.png)
+![单顶模式2-1](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F2-1.png)
 
 在NormalActivity启动MainActivity时，栈顶活动已经变成了NormalActivity，此时会创建一个新的MainActivity实例，在MainActivity启动DialogActivity时，栈顶活动又变成了MainActivity，然后在DialogActivity启动，栈顶活动变成了DialogActivity，再创建了一个新的MainActivity实例。最后在DialogActivity启动MainActivity时，栈顶活动又变成了MainActivity，此时按下Back键会回到DialogActivity，再按下Back键又会回到MainActivity，然后按两次Back键会依次回到NormalActivity和MainActivity，最后按Back键才会退出程序。
 
