@@ -109,3 +109,40 @@
 ![单顶模式1-4](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F1-4.png)
 
 在NormalActivity启动MainActivity时，栈顶活动已经变成了NormalActivity，此时会创建一个新的MainActivity实例，在MainActivity启动DialogActivity时，栈顶活动又变成了MainActivity，然后在DialogActivity启动，栈顶活动变成了DialogActivity，再创建了一个新的MainActivity实例。最后在DialogActivity启动MainActivity时，栈顶活动又变成了MainActivity，此时按下Back键会回到DialogActivity，再按下Back键又会回到MainActivity，然后按两次Back键会依次回到NormalActivity和MainActivity，最后按Back键才会退出程序。
+
+### 三、单任务模式（singleTask）
+
+修改MainActivity的启动模式：
+
+```java
+<activity android:name=".MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+```
+
+MainActivity的onRestart方法
+
+```java
+    protected  void onRestart() {
+        super.onRestart();
+        Log.d("MainActivity","onRestart");
+    }
+```
+
+NormalActivity的onDestroy方法
+
+```java
+   protected  void onDestroy() {
+        super.onDestroy();
+        Log.d("NormalActivity","onDestroy");
+    }
+```
+
+![单任务模式](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Four%20Startup%20mode/%E5%8D%95%E4%BB%BB%E5%8A%A1%E6%A8%A1%E5%BC%8F/%E6%88%AA%E5%9B%BE/%E5%8D%95%E4%BB%BB%E5%8A%A1%E6%A8%A1%E5%BC%8F.png)
+
+在 NormalActivity 中启动 MainActivity 时，会发现返回栈中已经存在一个 MainActivity 的实例，并且是在 NormalActivity 的下面，于是 NormalActivity 会从返回栈中出栈，而 MainActivity 重新成为了栈顶活动，因此MainActivity 的 onRestart()方法和 NormalActivity 的 onDestroy()方法会得到执行。 现在返回栈中应该只剩下一个 MainActivity 的实例了，按一下 Back 键就可以退出程序。
