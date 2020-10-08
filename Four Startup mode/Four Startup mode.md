@@ -1,8 +1,12 @@
 ## 四种**启动模式**：
 
-[一]: 	"标准模式"
+[标准模式项目](https://github.com/PengFeisupper/2018118122_Android/tree/homework/Four%20Startup%20mode/%E6%A0%87%E5%87%86%E6%A8%A1%E5%BC%8F/HelloWorld)
 
+[单顶模式项目](https://github.com/PengFeisupper/2018118122_Android/tree/homework/Four%20Startup%20mode/%E5%8D%95%E9%A1%B6%E6%A8%A1%E5%BC%8F/HelloWorld)
 
+[单任务模式项目](https://github.com/PengFeisupper/2018118122_Android/tree/homework/Four%20Startup%20mode/%E5%8D%95%E4%BB%BB%E5%8A%A1%E6%A8%A1%E5%BC%8F)
+
+[单实例模式项目](https://github.com/PengFeisupper/2018118122_Android/tree/homework/Four%20Startup%20mode/%E5%8D%95%E5%AE%9E%E4%BE%8B%E6%A8%A1%E5%BC%8F/HelloWorld)
 
 ### 一、标准模式（standard）
 
