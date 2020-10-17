@@ -87,7 +87,9 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
 
 ```
 
+在ViewHolder中添加了fruitView变量来保存子项最外层布局的实例，然后在onCreateViewHolder()方法中注册点击事件。
 
+在两个点击事件中先获取了用户点击的position。通过position拿到相应的Fruit实例，再使用Toast分别弹出两种不同的内容以示区别。
 
 MainActivity
 
@@ -162,4 +164,16 @@ public class MainActivity extends AppCompatActivity {
 getRadomLengthName()使用Random对象来创造一个1到20的随机数，然后将参数中传入的字符串随机重复几遍，
 
 initFruits()方法中每个水果的名字都改成调用getRadomLengthName()这个方法来生成，这样就能保证各水果名字的长短差距都比较大，子项的高度也就各不相同了
+
+界面瀑布布局：
+
+![RecyclerView](https://github.com/PengFeisupper/2018118122_Android/blob/homework/RecyclerviewTest/%E6%88%AA%E5%9B%BE/Recycleview.png)
+
+点击图片：
+
+![clickimage](https://github.com/PengFeisupper/2018118122_Android/blob/homework/RecyclerviewTest/%E6%88%AA%E5%9B%BE/clickimage.png)
+
+点击文字：
+
+![clicktext](https://github.com/PengFeisupper/2018118122_Android/blob/homework/RecyclerviewTest/%E6%88%AA%E5%9B%BE/clickview.png)
 
