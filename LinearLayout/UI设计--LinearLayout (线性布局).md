@@ -88,3 +88,15 @@ android:layout_weight的值指定为1，表示会在垂直方向平分高度
 
 ![imageview](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/imageview.png)
 
+**ProgressBar**
+
+```java
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+```
+
+![]()
+
