@@ -71,7 +71,6 @@ center_horizontal表示水平方向居中对齐
         android:text="不及格科目" />
 ```
 
-```
 android:layout_weight的值指定为1，表示会在垂直方向平分高度
-```
 
+![LinearLayout](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/LinearLayout.png)
