@@ -75,6 +75,8 @@ center_horizontal表示水平方向居中对齐，通过android:textSize属性�
 
 通过android:orientation属性指定为horizontal表示控件按水平排列，通过android:layout_weight的值指定为1，表示会在水平方向平分宽度
 
+![button-horizontal](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/horizontal-button.png)
+
 ```java
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
