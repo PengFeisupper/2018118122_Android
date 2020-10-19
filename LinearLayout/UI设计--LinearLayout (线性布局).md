@@ -129,5 +129,7 @@ center_horizontal表示水平方向居中对齐，通过android:textSize属性�
 
 ![imageview](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/imageview.png)
 
+![LinearLayout](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/LinearLayout.png)
+
 
 
