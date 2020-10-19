@@ -42,6 +42,8 @@ center_horizontal表示水平方向居中对齐，通过android:textSize属性�
 
 指定 android:orientation的值为horizontal，EditText和Button按水平方向排列
 
+![EditText](https://github.com/PengFeisupper/2018118122_Android/blob/homework/LinearLayout/%E6%88%AA%E5%9B%BE/EditText.png)
+
 **Button**
 
 ```java
