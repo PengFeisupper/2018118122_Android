@@ -18,20 +18,27 @@ center_horizontal表示水平方向居中对齐
 **EditText**
 
 ```java
-    <EditText
-        android:id="@+id/input_message"
-        android:layout_width="wrap_content"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="输入想要搜索的内容"/>
-    <Button
-        android:id="@+id/source"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="搜索"
+        >
+        <EditText
+            android:id="@+id/input_message1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="输入想要搜索的内容"/>
+        <Button
+            android:id="@+id/source"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="搜索"/>
+
+    </LinearLayout>
 ```
 
-搜索按钮通过指定android:layout_gravity的值为right，表示向右对齐，系统默认向左对齐
+指定 android:orientation="horizontal"的值为horizontal，EditText和Button按水平方向排列
 
 **Button**
 
