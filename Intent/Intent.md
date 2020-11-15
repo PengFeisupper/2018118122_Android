@@ -75,3 +75,36 @@ MainActivity
 ```
 
 在<data>标签中通过android:scheme指定了数据的协议必须是http协议。
+
+向下一个活动传递数据：
+
+MainActivity:
+
+```java
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String data = "Hello SecondActivity";
+                Intent intent=new  Intent(MainActivity.this,SecondActivity.class);
+                intent.putExtra("extra_data",data);
+                startActivity(intent);
+            }
+        });
+```
+
+SecondActivity
+
+```java
+public class SecondActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.second_layout);
+        Intent intent = getIntent();
+        String data =intent.getStringExtra("extra_data");
+        Log.d("SecondActivity",data);
+    }
+}
+```
+
