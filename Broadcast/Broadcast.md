@@ -28,10 +28,19 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 让MyBroadcastReceiver接收一条值com.example.broadcast.MY_BROADCAST的广播。
 
 ```java
+        Button button =(Button) findViewById(R.id.button1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new
+                        Intent("com.example.broadcast.MY_BROADCAST");
+                sendBroadcast(intent);
+            }
+        });
 
 ```
 
-
+构建一个个Intent对象，把要发送的广播的值传入，然后调用Context的sendBradcast（）方法将广播发送出去，这时所有监听com.example.broadcast.MY_BROADCAST这条广播的广播接收器就会收到消息
 
 ![发送自定义标准广播](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/%E6%88%AA%E5%9B%BE/%E5%8F%91%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E5%87%86%E5%B9%BF%E6%92%AD.png)
 
