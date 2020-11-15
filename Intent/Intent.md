@@ -2,9 +2,19 @@
 
 ##### 显式intent：
 
-```java
+MainActivity
 
+```java
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+            }
+        });
 ```
+
+
 
 ##### 隐式intent：
 
