@@ -92,6 +92,8 @@ MainActivity:
         });
 ```
 
+通过putExtra（）方法传递了一个字符串，接收了两个参数，一个参数是键，用于后面从intent取值，第二个才是真正要传递的数据。
+
 SecondActivity
 
 ```java
@@ -106,5 +108,76 @@ public class SecondActivity extends AppCompatActivity {
         Log.d("SecondActivity",data);
     }
 }
+```
+
+通过getIntent()方法获取到用于启动SecondActivity的intent，然后调用getStringExtra()方法，传入相应的键值，就可以得到传递的数据了。
+
+![传递数据](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Intent/%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE/%E6%88%AA%E5%9B%BE/%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE.png)
+
+##### 返回数据：
+
+MainActivity:
+
+```java
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new  Intent(MainActivity.this,SecondActivity.class);
+                startActivityForResult(intent,1);
+            }
+        });
+```
+
+```jav
+    protected  void onActivityResult(int requestCode, int resultCode,Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String returnedData = data.getStringExtra("data_return");
+                    Log.d("FirstActivity", returnedData);
+                }
+                break;
+            default:
+        }
+    }
+```
+
+
+
+SecondActivity：
+
+```java
+public class SecondActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.second_layout);
+        Button button2 = (Button) findViewById(R.id.button_2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent();
+                intent.putExtra("data_return","Hello MainActivity");
+                setResult(RESULT_OK,intent);
+                finish();
+            }
+        });
+    }
+}
+
+
+```
+
+```java
+    public void onBackPressed(){
+        Intent intent =new Intent();
+        intent.putExtra("data_return","Hello MainActivity");
+        setResult(RESULT_OK,intent);
+        finish();
+    }
+}
+
 ```
 
