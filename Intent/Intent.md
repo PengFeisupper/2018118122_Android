@@ -47,5 +47,17 @@ MainActivity
         });
 ```
 
+访问网址：
 
+```java
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.baidu.com"));
+                startActivity(intent);
+            }
+        });
+```
 
+指定了intent的action是Intent。ACTION_VIEW,然后通过Uri。parse（）方法，将一个网址字符串解析成一个Uri对象，再调用setData（）方法将这个Uri对象传递出去。setData（）接收一个Uri对象，主要用于指定当前intent正在操作的数据，而这些数据通常是以字符串的形式传入到Uri.parse()方法中解析产生的。
