@@ -18,6 +18,22 @@ MainActivity
 
 ##### 隐式intent：
 
+AndroidMainfest.xml
+
+```java
+        <activity android:name=".SecondActivity">
+            <intent-filter>
+                <action android:name="com.example.secondactivity.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.secondactivity.MY_CATEGORY" />
+            </intent-filter>
+        </activity>
+```
+
+指明了当前活动可以响com.example.secondactivity.ACTION_START这个action
+
+
+
 MainActivity
 
 ```java
