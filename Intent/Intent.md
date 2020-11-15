@@ -128,7 +128,10 @@ MainActivity:
         });
 ```
 
-```jav
+使用startActivityForResult()方法启动SecondACtivity，传入1.
+
+```java
+
     protected  void onActivityResult(int requestCode, int resultCode,Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
@@ -143,7 +146,7 @@ MainActivity:
     }
 ```
 
-
+onActivityResult（)方法有三个参数，第一个参数是requsetCode，请求码，第二个参数resultCode，返回数据时传入的处理结果，第三个参数data，携带着返回数据的intent。
 
 SecondActivity：
 
@@ -167,8 +170,10 @@ public class SecondActivity extends AppCompatActivity {
     }
 }
 
-
+                                                 
 ```
+
+setResult（）方法接收两参数，第一个参数用于向上一个活动返回处理结果，第二个参数把带有数据的intent传递回去，然后调用finish（）来销毁当前活动。
 
 ```java
     public void onBackPressed(){
@@ -181,3 +186,6 @@ public class SecondActivity extends AppCompatActivity {
 
 ```
 
+按下Back键回到MainActivity ，返回数据。
+
+![返回数据](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Intent/%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/%E6%88%AA%E5%9B%BE/%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE1.png)
