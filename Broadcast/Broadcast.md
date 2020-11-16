@@ -86,3 +86,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+![有序广播](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/%E6%9C%89%E5%BA%8F%E5%B9%BF%E6%92%AD/%E6%88%AA%E5%9B%BE/%E6%9C%89%E5%BA%8F%E5%B9%BF%E6%92%AD.png)
