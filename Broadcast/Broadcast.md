@@ -44,3 +44,45 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
 
 ![发送自定义标准广播](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/%E6%88%AA%E5%9B%BE/%E5%8F%91%E9%80%81%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%87%E5%87%86%E5%B9%BF%E6%92%AD.png)
 
+##### 发送有序广播
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Button button =(Button) findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new
+                        Intent("com.example.broadcast.MY_BROADCAST");
+                sendOrderedBroadcast(intent,null);
+            }
+        });
+    }
+}
+```
+
+```jav
+       <receiver android:name=".MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.example.broadcast.MY_BROADCAST"/>
+            </intent-filter>
+        </receiver>
+```
+
+```java
+  public void onReceive(Context context, Intent intent) {
+        Toast.makeText(context,"received in MyBroadReceiver",Toast.LENGTH_SHORT).show();
+        abortBroadcast();
+
+    }
+```
+
+
+
