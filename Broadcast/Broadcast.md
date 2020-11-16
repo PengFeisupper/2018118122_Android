@@ -84,6 +84,6 @@ public class MainActivity extends AppCompatActivity {
     }
 ```
 
-
+![未截断广播前](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/%E6%9C%89%E5%BA%8F%E5%B9%BF%E6%92%AD/%E6%88%AA%E5%9B%BE/3b80ac31144abf85c136ad72368c673.png)
 
 ![有序广播](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/%E6%9C%89%E5%BA%8F%E5%B9%BF%E6%92%AD/%E6%88%AA%E5%9B%BE/%E6%9C%89%E5%BA%8F%E5%B9%BF%E6%92%AD.png)
