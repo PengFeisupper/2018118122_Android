@@ -1,8 +1,10 @@
 #### Material Design
 
-##### Toolbar
+**Toolbar**
 
-指定一个不带ActionBar的主题
+**指定一个不带ActionBar的主题**
+
+**res/values/sysles.xml**
 
 ```java
 <resources>
@@ -59,4 +61,28 @@ public class MainActivity extends AppCompatActivity {
 
 
 ![Toolbar](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/%E6%89%B9%E6%B3%A8%202020-11-30%20171104.png)
+
+
+
+#### **Toolbar常用功能：**
+
+**修改标题栏显示的文字内容;**
+
+**AndroidMainfest.xml**
+
+```
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity"
+            android:label="Fruits">
+```
+
+修改标题为Fruits
+
+
 
