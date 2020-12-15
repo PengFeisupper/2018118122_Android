@@ -111,5 +111,5 @@ public class MainActivity extends AppCompatActivity {
 </menu>
 ```
 
-
+通过<item>标签定义action按钮，android：id用于指定按钮的id,android:icon 用于指定按钮的图标，android:title用于指定按钮的文字。接着使用app:showAsAction来指定按钮的显示位置，always表示永远显示在Toolbar中，如果屏幕空间不够则不显示;IfRoom表示屏幕空间足够的情况下显示在Toolbar中，不够的话就显示在菜单中；never则表示永远显示在菜单中。Toolbar中的action按钮只会显示图标，菜单中的action按钮只会显示文字。
 
