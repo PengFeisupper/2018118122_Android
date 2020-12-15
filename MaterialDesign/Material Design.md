@@ -84,5 +84,32 @@ public class MainActivity extends AppCompatActivity {
 
 修改标题为Fruits
 
+##### 添加action按钮：
+
+**menu/toolbar.xml**
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/backup"
+        android:icon="@drawable/ic_backup"
+        android:title="Backup"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_setting"
+        android:title="Settings"
+        app:showAsAction="never" />
+
+</menu>
+```
+
 
 
