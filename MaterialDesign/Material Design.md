@@ -17,8 +17,6 @@
 </resources>
 ```
 
-定义了一个Toolbar控件，由appcompat-v7库提供。使用了android:popupTheme属性，单独将弹出的菜单项指定成了淡色主题。而且还可以兼容Android5.0以下的系统
-
 **Activity.xml**
 
 ```
@@ -39,13 +37,24 @@
 </FrameLayout>
 ```
 
-Mainactivity:
+定义了一个Toolbar控件，由appcompat-v7库提供。使用了android:popupTheme属性，单独将弹出的菜单项指定成了淡色主题。而且还可以兼容Android5.0以下的系统
+
+**MainActivity:**
 
 ```
+public class MainActivity extends AppCompatActivity {
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+}
 ```
 
-
+首先通过findViewById（）得到Toolbar的实例，然后调用setSupportActionBar（）方法将Toolbar的实例传入，既使用了Toolbar，又让它的外观和功能都和ActionBar一致了
 
 
 
