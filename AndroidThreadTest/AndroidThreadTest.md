@@ -126,4 +126,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 ```
 
-先定义了
+先定义了一个整形常量UPDATE_TEXT，用于更新TextView这个动作。然后新增一个Handler对象，并重写父类的andlerMessage（）方法，在这里对具体的Message进行处理。对Message的what字段的值进行判断，如果UPDATE_TEXT，就将TextView显示的内容成“我是子线程：  我的值是：”
