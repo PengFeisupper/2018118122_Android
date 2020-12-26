@@ -131,3 +131,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 在主线程当中创建一个Handler对象，并重写handlerMessage（）方法。然后当子线程中需要进行UI操作时，就创建一个Message对象，并通过Hadler将这条消息发送出去。之后这条消息会被添加到MessageQueue的队列中等待被处理，而Looper则会一直尝试从MessageQueue中取出待处理消息，最后分发回Handler的handlerMessage（）方法中，由于Handler是在主线程中创建的，所以此时handlerMessage（）方法中的代码也会在主线程中运行
 
 ![主线程](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/%E6%88%AA%E5%9B%BE/%E6%89%B9%E6%B3%A8%202020-12-26%20154105.png)
+
+![子线程1](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/%E6%88%AA%E5%9B%BE/%E6%89%B9%E6%B3%A8%202020-12-26%20152600.png)
+
