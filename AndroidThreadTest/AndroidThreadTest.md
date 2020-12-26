@@ -128,4 +128,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 先定义了一个整形常量UPDATE_TEXT，用于更新TextView这个动作。然后新增一个Handler对象，并重写父类的andlerMessage（）方法，在这里对具体的Message进行处理。对Message的what字段的值进行判断，如果UPDATE_TEXT，就将TextView显示的内容成“我是子线程：  我的值是：”
 
-在主线程当中创建一个Handler对象，并重写handlerMessage（）方法。然后当子线程中需要进行UI操作时，就创建一个Message对象，并通过Hadler将这条消息发送出去。之后这条消息会被添加到MessageQueue
+在主线程当中创建一个Handler对象，并重写handlerMessage（）方法。然后当子线程中需要进行UI操作时，就创建一个Message对象，并通过Hadler将这条消息发送出去。之后这条消息会被添加到MessageQueue的队列中等待被处理，而Looper则会一直尝试从MessageQueue中取出待处理消息，最后分发回Handler的handlerMessage（）方法中，由于Handler是在主线程中创建的，所以此时handlerMessage（）方法中的代码也会在主线程中运行
