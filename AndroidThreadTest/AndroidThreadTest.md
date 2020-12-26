@@ -134,3 +134,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 ![子线程1](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/%E6%88%AA%E5%9B%BE/%E6%89%B9%E6%B3%A8%202020-12-26%20152600.png)
 
+![子线程2](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/%E6%88%AA%E5%9B%BE/%E6%89%B9%E6%B3%A8%202020-12-26%20154139.png)
+
