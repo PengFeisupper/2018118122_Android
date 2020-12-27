@@ -63,6 +63,10 @@ AndroidMainfest.xml
 
 ![ServiceTest](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/Service.png)
 
+![stopService](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/stopService.png)
+
+**服务之间的通信**
+
 
 
 
