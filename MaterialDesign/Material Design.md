@@ -208,3 +208,121 @@ public class MainActivity extends AppCompatActivity {
 ```
 
 ![滑动菜单](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/%E6%BB%91%E5%8A%A8%E8%8F%9C%E5%8D%95.png)
+
+**NavigationView**
+
+nav_menu.xml
+
+```jav
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@drawable/nav_call"
+            android:title="Call" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/nav_friends"
+            android:title="Friends" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/nav_location"
+            android:title="Location" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/nav_mail"
+            android:title="Mail" />
+        <item
+            android:id="@+id/nav_task"
+            android:icon="@drawable/nav_task"
+            android:title="Tasks" />
+    </group>
+</menu>
+```
+
+activity_main.xml
+
+```jav
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways|snap" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_done" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
+</android.support.v4.widget.DrawerLayout>
+```
+
+Mainactivity
+
+```
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+    mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+    NavigationView navView = (NavigationView) findViewById(R.id.nav_view);
+    ActionBar actionBar = getSupportActionBar();
+    if(actionBar != null){
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+    }
+    navView.setCheckedItem(R.id.nav_call);
+    navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
+        @Override
+        public boolean onNavigationItemSelected(MenuItem item){
+            mDrawerLayout.closeDrawers();
+            return true;
+        }
+    });
+```
