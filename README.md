@@ -12,4 +12,10 @@
 
 [第七次实验](https://github.com/PengFeisupper/2018118122_Android/blob/homework/Broadcast/Broadcast.md)
 
-[第八加第九次实验](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/AndroidThreadTest.md)
+[第八和第九次实验](https://github.com/PengFeisupper/2018118122_Android/blob/homework/AndroidThreadTest/AndroidThreadTest.md)
+
+[第九和第十次实验](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/ServiceTest.md)
+
+[第十一次实验](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/Material%20Design.md)
+
+[大作业](https://github.com/PengFeisupper/2018118122_Android/tree/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A)
