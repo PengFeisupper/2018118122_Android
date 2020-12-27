@@ -67,6 +67,38 @@ AndroidMainfest.xml
 
 **服务之间的通信**
 
+**MyService**
+
+```java
+public class MyService extends Service {
+
+    public MyService() {
+    }
+
+    private DownloadBinder mBinder = new DownloadBinder();
+
+    class DownloadBinder extends Binder {
+
+        public void startDownload() {
+
+            Log.d("MyService", "startDownload executed");
+        }
+
+        public int getProgress() {
+            Log.d("MyService", "getProgress executed");
+            return 0;
+        }
+
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+```
+
+
+
 
 
 
