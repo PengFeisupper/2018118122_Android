@@ -60,3 +60,10 @@ AndroidMainfest.xml
 ```
 
 ![startService](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/startService.png)
+
+![ServiceTest](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/Service.png)
+
+
+
+
+
