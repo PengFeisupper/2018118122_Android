@@ -167,9 +167,48 @@ activity_main.xml
 
 
 
+**intentService**
 
+**MyService**
 
+```java
+   @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d("MyService", "onStartCommand executed");
+        return super.onStartCommand(intent, flags, startId);
+    }
+```
 
+在服务的每一个具体的方法中开启一个子线程
+
+**MyIntentService**
+
+```jav
+public class MyIntentService extends IntentService {
+
+    public MyIntentService() {
+        super("MyIntentService"); // 调用父类的有参构造函数
+        Log.d("MyIntentService", "Thread id is " + Thread.currentThread(). getId());
+    }
+
+    @Override
+    protected void onHandleIntent(Intent intent) {
+        // 打印当前线程的id
+        Log.d("MyIntentService", "Thread id is " + Thread.currentThread(). getId());
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Log.d("MyIntentService", "onDestroy executed");
+        Log.d("MyIntentService", "Thread id is " + Thread.currentThread(). getId());
+    }
+
+}
+
+```
+
+提供一个无参的构造函数，在子类中实现onHandleIntent（）这个抽象方法，创建了一个异步的会自动停止的服务。
 
 
 
