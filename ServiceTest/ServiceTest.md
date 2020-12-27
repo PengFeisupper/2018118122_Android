@@ -65,7 +65,7 @@ AndroidMainfest.xml
 
 ![stopService](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/stopService.png)
 
-**服务之间的通信**
+**绑定服务**
 
 **MyService**
 
@@ -97,9 +97,7 @@ public class MyService extends Service {
     }
 ```
 
-
-
-
+创建一个DownloadBinder的实例，然后在onBind（）方法中返回了这个实例
 
 
 
