@@ -99,5 +99,23 @@ public class MyService extends Service {
 
 新建一个DownloadBinder类，并让它继承自Binder，然后在它内部提供了考试下载和查看下载的模拟方法。创建一个DownloadBinder的实例，然后在onBind（）方法中返回了这个实例
 
+activity_main.xml
+
+```java
+    <Button
+        android:id="@+id/bind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bind Service" />
+
+    <Button
+        android:id="@+id/unbind_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unbind Service" />
+```
+
+
+
 
 
