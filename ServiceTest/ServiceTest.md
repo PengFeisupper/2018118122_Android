@@ -210,5 +210,5 @@ public class MyIntentService extends IntentService {
 
 提供一个无参的构造函数，在子类中实现onHandleIntent（）这个抽象方法，创建了一个异步的会自动停止的服务。
 
-
+![startIntentSevice](https://github.com/PengFeisupper/2018118122_Android/blob/homework/ServiceTest/%E6%88%AA%E5%9B%BE/startIntentService.png)
 
