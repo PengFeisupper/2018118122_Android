@@ -97,7 +97,7 @@ public class MyService extends Service {
     }
 ```
 
-创建一个DownloadBinder的实例，然后在onBind（）方法中返回了这个实例
+新建一个DownloadBinder类，并让它继承自Binder，然后在它内部提供了考试下载和查看下载的模拟方法。创建一个DownloadBinder的实例，然后在onBind（）方法中返回了这个实例
 
 
 
