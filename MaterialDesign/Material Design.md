@@ -816,5 +816,7 @@ public class FruitActivity extends AppCompatActivity {
 
 ![](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/14.jpg)
 
+![](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/15.jpg)
+
 
 
