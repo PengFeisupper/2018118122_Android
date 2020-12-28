@@ -326,3 +326,5 @@ protected void onCreate(Bundle savedInstanceState) {
         }
     });
 ```
+
+![NavigationView](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/NavigationView%E7%95%8C%E9%9D%A2.png)
