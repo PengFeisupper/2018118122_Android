@@ -418,5 +418,69 @@ activity_main.xml
 
 ![CoordinatorLayout](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/9.jpg)
 
+**CardView**
+
+Fruit
+
+```jav
+public class Fruit {
+
+    private String name;
+    private int imageId;
+
+    public Fruit(String name, int imageId){
+        this.name = name;
+        this.imageId = imageId;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public int getImageId(){
+        return imageId;
+    }
+}
+```
+
+fruit_item.xml
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/fruit_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop" />
+        <TextView
+            android:id="@+id/fruit_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+```
+
+
+
+![cardview](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/%E5%8D%A1%E7%89%87%E5%BC%8F%E5%B8%83%E5%B1%80%E6%95%88%E6%9E%9Cpng.png)
+
 
 
