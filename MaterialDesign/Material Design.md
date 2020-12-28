@@ -478,9 +478,144 @@ fruit_item.xml
 </android.support.v7.widget.CardView>
 ```
 
+FruitAdpatter
+
+```java
+public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> {
+
+    private Context mContext;
+    private List<Fruit> mFruitList;
+
+    static class ViewHolder extends RecyclerView.ViewHolder{
+        CardView cardView;
+        ImageView fruitImage;
+        TextView fruitName;
+
+        public ViewHolder(View view){
+            super(view);
+            cardView = (CardView) view;
+            fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
+            fruitName = (TextView) view.findViewById(R.id.fruit_name);
+        }
+    }
+
+    public FruitAdapter(List<Fruit> fruitList){
+        mFruitList = fruitList;
+    }
+
+    @Override
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
+        if(mContext == null){
+            mContext = parent.getContext();
+        }
+        View view = LayoutInflater.from(mContext).inflate(R.layout.fruit_item, parent, false);
+        final ViewHolder holder = new ViewHolder(view);
+        holder.cardView.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                int position = holder.getAdapterPosition();
+                Fruit fruit = mFruitList.get(position);
+                Intent intent = new Intent(mContext, FruitActivity.class);
+                intent.putExtra(FruitActivity.FRUIT_NAME, fruit.getName());
+                intent.putExtra(FruitActivity.FRUIT_IMAGE_ID, fruit.getImageId());
+                mContext.startActivity(intent);
+            }
+        });
+        return holder;
+    }
+
+    @Override
+    public void onBindViewHolder(ViewHolder holder, int position){
+        Fruit fruit = mFruitList.get(position);
+        holder.fruitName.setText(fruit.getName());
+        Glide.with(mContext).load(fruit.getImageId()).into(holder.fruitImage);
+    }
+
+    @Override
+    public int getItemCount(){
+        return mFruitList.size();
+    }
+}
+
+```
+
 
 
 ![cardview](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/%E5%8D%A1%E7%89%87%E5%BC%8F%E5%B8%83%E5%B1%80%E6%95%88%E6%9E%9Cpng.png)
+
+**AppBarLayout**
+
+activity_mail.xml
+
+```java
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways|snap"/>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_done"
+            app:elevation="8dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/nav_menu"
+        app:headerLayout="@layout/nav_header" />
+</android.support.v4.widget.DrawerLayout>
+```
+
+![](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/11.jpg)
+
+![](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/13.jpg)
+
+**CollapsingToolbarLayout**
 
 
 
