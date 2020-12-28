@@ -367,6 +367,29 @@ FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
 ![点击悬浮按钮](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/6.jpg)
 
+**Snackerbar**
+
+MainActivity
+
+```java
+FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Snackbar.make(view, "Data deleted", Snackbar.LENGTH_SHORT)
+                        .setAction("Undo", new View.OnClickListener(){
+                            @Override
+                            public void onClick(View v){
+                                Toast.makeText(MainActivity.this, "Data restored",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        }).show();
+            }
+        });
+```
+
+![Snackbar](https://github.com/PengFeisupper/2018118122_Android/blob/homework/MaterialDesign/%E6%88%AA%E5%9B%BE/7.jpg)
+
 
 
 
