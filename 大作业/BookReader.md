@@ -32,6 +32,8 @@
 
 **阅读小说**
 
+可以对小说内容进行翻页，以及对小说字体、亮度等进行设置
+
 ![小说目录](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/read_page_1.png)
 
 ![小说翻页1](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/read_page_2.png)
@@ -43,6 +45,8 @@
 ![翻页效果](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/read_page_5.png)
 
 #### 社区
+
+可以在讨论区发表自己的意见或评论别人的帖子
 
 ![讨论区](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/discuss.png)
 
