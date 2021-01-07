@@ -76,6 +76,10 @@
 
 ![设置翻页效果](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/settings-1.png)
 
+![wifi传书](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/wifi_transfer.png)
+
+
+
 
 
 
