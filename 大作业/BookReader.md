@@ -32,7 +32,11 @@
 
 ![翻页效果](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/read_page_5.png)
 
+#### 社区
 
+![讨论区](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/discuss.png)
+
+![帖子详情](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/discuss_detail.png)
 
 
 
