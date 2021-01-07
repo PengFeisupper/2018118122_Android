@@ -46,7 +46,13 @@
 
 #### 排行榜
 
-![]()
+可以观看不同方式制定的排行榜
+
+![排行榜](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/rank_type.png)
+
+![排行榜列表](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/rank_list.png)
+
+
 
 #### 主题书单
 
