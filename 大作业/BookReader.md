@@ -24,7 +24,11 @@
 
 ##### 书籍分类
 
+书籍主要分为男生和女生两大类，之中又有细分，你如男生中有玄幻，看科幻，女生中有言情等
 
+![书籍分类](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/category.png)
+
+![同类型小说列表](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/category_list.png)
 
 **阅读小说**
 
