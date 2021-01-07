@@ -44,7 +44,13 @@
 
 ![翻页效果](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/read_page_5.png)
 
+#### 排行榜
+
+![]()
+
 #### 主题书单
+
+可以按照主题选择自己想要看的小说
 
 ![筛选主题](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/subject_tag.png)
 
