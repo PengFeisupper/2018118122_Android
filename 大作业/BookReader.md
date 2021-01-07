@@ -14,11 +14,17 @@
 
 ##### 书籍
 
+可以通过书籍名或标签对书籍进行检索，查看书籍详情，和将书籍加入书架
+
 ##### ![查找书籍](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/search.png)
 
 ![书籍详情](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/book_detail.png)
 
 ![加入书架](https://github.com/PengFeisupper/2018118122_Android/blob/homework/%E5%A4%A7%E4%BD%9C%E4%B8%9A/%E6%88%AA%E5%9B%BE/scan_book.png)
+
+##### 书籍分类
+
+
 
 **阅读小说**
 
